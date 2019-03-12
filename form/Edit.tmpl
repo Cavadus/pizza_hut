@@ -1,0 +1,14 @@
+{{ define "Edit" }}
+  {{ template "Header" }}
+    {{ template "Menu" }}
+   <h2>Edit First Name, Last Name, Email, and Phone</h2>
+     <form method="POST" action="update">
+       <input type="hidden" name="uid" value="{{ .Id }}" />
+       <label> First Name </label><input type="text" name="fname" value="{{ .Fname }}" /><br />
+       <label> Last Name </label><input type="text" name="lname" value="{{ .Lname }}" /><br />
+       <label> Email </label><input type="text" name="email" value="{{ .Email }}" /><br />
+       <label> Phone </label><input type="text" name="phone" value="{{ .Phone }}" /><br />
+       <input type="submit" value="Save user" />
+      </form><br />
+    {{ template "Footer" }}
+{{ end }}
